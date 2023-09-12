@@ -1,0 +1,24 @@
+Global
+:h elp  keyword :sav eas  file :clo se  :ter minal  K Tip Run vimtutor in a terminal to learn the first Vim commands.
+Cursor movement
+h j k l gj gk H M L w W e E b B ge gE % 0 $ g_ gg G 5gg or 5G gd gD fx tx Fx Tx ; ,     zz zt zb Ctrl   e Ctrl   y Ctrl   b Ctrl   f Ctrl   d Ctrl   u Tip Prefix a cursor movement command with a number to repeat it. For example, 4j moves down 4 lines.
+Insert mode i I a A o O ea Ctrl   h Ctrl   w Ctrl   j Ctrl   t Ctrl   d Ctrl   n Ctrl   p Ctrl   rx Ctrl   ox Esc or Ctrl   c Editing
+r R J gJ gwip g~ gu gU cc c$ or C ciw cw or ce s S xp u U Ctrl   r . Marking text  visual mode 
+v V o Ctrl   v O aw ab aB at ib iB it Esc or Ctrl   c Tip Instead of b or B one can also use   or   respectively.
+Visual commands
+> < y d ~ u U Registers
+:reg isters  "xy "xp " y " p Tip Registers are being stored in ~/.viminfo, and will be loaded again on next restart of vim.
+Tip Special registers:
+ 0  "  %  #        /  :  .   =  _ Marks and positions
+:marks ma `a y`a `0 `" `. `` :ju mps  Ctrl   i Ctrl   o :changes g, g; Ctrl     Tip To jump to a mark you can either use a backtick  `  or an apostrophe  ' . Using an apostrophe jumps to the beginning  first nonMacros
+qa q @a @@ Cut and paste
+yy 2yy yw yiw yaw y$ or Y p P gp gP dd 2dd dw diw daw :3,5d Tip You can also use the following characters to specify the range:
+e.g.
+:.,$d :.,1d :10,$d :g/ pattern /d :g!/ pattern /d d$ or D x Indent text
+>> << >% <% >ib >at 3== =% =iB gg=G  p Exiting
+:w :w !sudo tee % :wq or :x or ZZ :q :q! or ZQ :wqa Search and replace
+/pattern ?pattern \vpattern n N :%s/old/new/g :%s/old/new/gc :noh lsearch  Search in multiple files
+:vim grep  /pattern/  ` file `  e.g. :vim grep  /foo/   / 
+:cn ext  :cp revious  :cope n  :ccl ose  Tabs
+:tabnew or :tabnew  page.words.file  Ctrl   wT gt or :tabn ext  gT or :tabp revious  #gt :tabm ove  # :tabc lose  :tabo nly  :tabdo command Working with multiple files
+:e dit  file :bn ext  :bp revious  :bd elete  :b uffer # :b uffer  file :ls or :buffers :sp lit  file :vs plit  file :vert ical  ba ll  :tab ba ll  Ctrl   ws Ctrl   wv Ctrl   ww Ctrl   wq Ctrl   wx Ctrl   w= Ctrl   wh Ctrl   wl Ctrl   wj Ctrl   wk Ctrl   wH Ctrl   wL Ctrl   wJ Ctrl   wK 

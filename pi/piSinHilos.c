@@ -39,7 +39,7 @@ int main()
 {
     Packer upTo ;
     // upTo.l = 50000000000;
-    upTo.l = 10000;
+    upTo.l = 50000000000;
     upTo.c = 0;
     upTo.index = 0;
     clock_t start = clock();
